@@ -16,12 +16,67 @@
   margin-bottom: 20px;
 }
 
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c33;
+  font-weight: 500;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.availability-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background: white;
+}
+
+.availability-filter input {
+  margin: 0;
+}
+
 .service-form {
   background: white;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.service-form h2 {
+  color: #0066cc;
+  margin-bottom: 20px;
 }
 
 .service-form input,
@@ -33,6 +88,7 @@
   border-radius: 4px;
   font-size: 14px;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 .service-form textarea {
@@ -45,6 +101,54 @@
   outline: none;
   border-color: #0066cc;
   box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.availability-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.availability-checkbox input {
+  margin: 0;
+  cursor: pointer;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  flex: 1;
+}
+
+.btn-secondary {
+  background: #666;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #555;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+  font-size: 16px;
 }
 
 .services-grid {
@@ -67,9 +171,33 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.service-card h3 {
-  color: #17a2b8;
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
+}
+
+.card-header h3 {
+  color: #17a2b8;
+  margin: 0;
+}
+
+.availability-badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.availability-badge.available {
+  background: #d4edda;
+  color: #155724;
+}
+
+.availability-badge.unavailable {
+  background: #f8d7da;
+  color: #721c24;
 }
 
 .service-card p {
@@ -78,6 +206,77 @@
   font-size: 14px;
   line-height: 1.6;
 }
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #17a2b8;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-edit {
+  flex: 1;
+  background: #0066cc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-edit:hover {
+  background: #0052a3;
+}
+
+.btn-danger {
+  flex: 1;
+  background: #dc3545;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+.btn-primary {
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: #218838;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+  font-size: 16px;
+}
+
 
 .service-card .btn-danger {
   width: 100%;
